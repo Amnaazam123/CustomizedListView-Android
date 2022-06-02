@@ -19,19 +19,21 @@ public class MyAdapter extends ArrayAdapter<Student>
     public MyAdapter(@NonNull Context context, ArrayList<Student> studentArrayList) {
         super(context, 0, studentArrayList);
     }
+    @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-    Student student = getItem(position);
-    convertView = LayoutInflater.from(getContext()).inflate(R.layout.studentview, parent, false);
-    TextView textViewName =  convertView.findViewById(R.id.name);
-    TextView textViewCampus = convertView.findViewById(R.id.section);
-    TextView textViewId = convertView.findViewById(R.id.id);
-    ImageView imageView = convertView.findViewById(R.id.imageView2);
-    textViewName.setText(student.name);
-    textViewCampus.setText(student.campus);
-    textViewId.setText(student.rollNumber);
-    imageView.setImageResource(student.imageID);
-    return convertView;
+        Student student =  getItem(position);
+        convertView = LayoutInflater.from(getContext()).inflate(R.layout.studentview,parent,
+                false);
+        TextView name = convertView.findViewById(R.id.textView);
+        TextView id = convertView.findViewById(R.id.textView2);
+        TextView section = convertView.findViewById(R.id.textView3);
+        ImageView imgview = convertView.findViewById(R.id.imageView);
+        name.setText(student.getName());
+        id.setText(student.getId());
+        section.setText(student.getSection());
+        imgview.setImageResource(student.getImgid());
+        return convertView;
     }
 
 
