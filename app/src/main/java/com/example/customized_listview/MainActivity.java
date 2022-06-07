@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         arraylist.add(new Student("Arooj","4","se19",R.drawable.c));
         arraylist.add(new Student("Ahmed","5","se19",R.drawable.d));
 
-        ArrayAdapter list = new ArrayAdapter(this,0,arraylist);
+        MyAdapter list = new MyAdapter(this,0,arraylist);
         listview.setAdapter(list);
 
     }

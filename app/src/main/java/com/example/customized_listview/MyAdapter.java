@@ -16,8 +16,8 @@ import java.util.List;
 
 public class MyAdapter extends ArrayAdapter<Student>
 {
-    public MyAdapter(@NonNull Context context, ArrayList<Student> studentArrayList) {
-        super(context, 0, studentArrayList);
+    public MyAdapter(@NonNull Context context,int resource, ArrayList<Student> studentArrayList) {
+        super(context, resource, studentArrayList);
     }
     @NonNull
     @Override
