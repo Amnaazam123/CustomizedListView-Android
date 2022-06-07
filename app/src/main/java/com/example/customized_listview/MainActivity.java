@@ -17,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         listview = findViewById(R.id.listview);
         ArrayList<Student> arraylist = new ArrayList<Student>();
-        arraylist.add(new Student("mahnoor","2","se19",R.drawable.a));
-        arraylist.add(new Student("mahnoor","3","se19",R.drawable.b));
-        arraylist.add(new Student("mahnoor","4","se19",R.drawable.c));
-        arraylist.add(new Student("mahnoor","5","se19",R.drawable.d));
+        arraylist.add(new Student("Amna","2","se19",R.drawable.a));
+        arraylist.add(new Student("Arshia","3","se19",R.drawable.b));
+        arraylist.add(new Student("Arooj","4","se19",R.drawable.c));
+        arraylist.add(new Student("Ahmed","5","se19",R.drawable.d));
 
         ArrayAdapter list = new ArrayAdapter(this,0,arraylist);
         listview.setAdapter(list);
